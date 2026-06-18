@@ -645,6 +645,40 @@
     outline: none;
     padding: 2px 4px;
   }
+  .bill-ship-fields {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .bill-ship-field-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .bill-ship-field-label {
+    font-size: 13px;
+    color: #d4b46a;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    min-width: 56px;
+    flex-shrink: 0;
+  }
+  .bill-ship-field-input {
+    flex: 1;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #8a7550;
+    color: #fff8e1;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    padding: 4px 2px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+  }
+  .bill-ship-field-input::placeholder { color: #6b5530; }
+  .bill-ship-field-input:focus { border-bottom-color: #ffd54f; }
   .bill-items { width: 100%; max-width: 320px; display: flex; flex-direction: column; gap: 14px; }
   .bill-item-row { display: flex; align-items: baseline; gap: 12px; }
   .bill-item-qty { font-size: 20px; font-weight: 800; color: #ffd54f; min-width: 32px; text-align: right; font-family: 'Baloo 2', sans-serif; }
@@ -694,7 +728,7 @@
     <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Nước ép ổi</span></div><span class="item-desc">Tươi mát, giàu chất xơ</span></div><div class="ml-prices"><div class="ml-btn" onclick="addToCart('Nước ép ổi (M)','10k',this)"><span class="ml-btn-size">M</span><span class="ml-btn-price">10k</span></div><div class="ml-btn" onclick="addToCart('Nước ép ổi (L)','15k',this)"><span class="ml-btn-size">L</span><span class="ml-btn-price">15k</span></div></div></div>
     <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Nước ép cà rốt</span></div><span class="item-desc">Ngọt dịu, tốt cho mắt</span></div><div class="ml-prices"><div class="ml-btn" onclick="addToCart('Nước ép cà rốt (M)','10k',this)"><span class="ml-btn-size">M</span><span class="ml-btn-price">10k</span></div><div class="ml-btn" onclick="addToCart('Nước ép cà rốt (L)','15k',this)"><span class="ml-btn-size">L</span><span class="ml-btn-price">15k</span></div></div></div>
     <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Nước ép dưa hấu</span></div><span class="item-desc">Giải nhiệt cực đỉnh ngày nóng</span></div><div class="ml-prices"><div class="ml-btn" onclick="addToCart('Nước ép dưa hấu (M)','10k',this)"><span class="ml-btn-size">M</span><span class="ml-btn-price">10k</span></div><div class="ml-btn" onclick="addToCart('Nước ép dưa hấu (L)','15k',this)"><span class="ml-btn-size">L</span><span class="ml-btn-price">15k</span></div></div></div>
-    <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Nước ép thơm</span></div><span class="item-desc">Chua ngọt hài hoà, thơm nồng</span></div><div class="ml-prices"><div class="ml-btn" onclick="addToCart('Nước ép thơm (M)','10k',this)"><span class="ml-btn-size">M</span><span class="ml-btn-price">10k</span></div><div class="ml-btn" onclick="addToCart('Nước ép thơm (L)','15k',this)"><span class="ml-btn-size">L</span><span class="ml-btn-price">15k</span></div></div></div>
+    <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Nước ép thơm</span></div><span class="item-desc">Chua ngọt hài hoà, thơm nồng</span></div><span class="item-price">15k</span><button class="item-add" onclick="addToCart('Nước ép thơm','15k',this)">+</button></div>
     <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Nước ép cóc</span></div><span class="item-desc">Chua giòn đặc trưng miền Nam</span></div><div class="ml-prices"><div class="ml-btn" onclick="addToCart('Nước ép cóc (M)','10k',this)"><span class="ml-btn-size">M</span><span class="ml-btn-price">10k</span></div><div class="ml-btn" onclick="addToCart('Nước ép cóc (L)','15k',this)"><span class="ml-btn-size">L</span><span class="ml-btn-price">15k</span></div></div></div>
     <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Nước ép cà chua</span></div><span class="item-desc">Thanh nhẹ, nhiều lycopene</span></div><div class="ml-prices"><div class="ml-btn" onclick="addToCart('Nước ép cà chua (M)','10k',this)"><span class="ml-btn-size">M</span><span class="ml-btn-price">10k</span></div><div class="ml-btn" onclick="addToCart('Nước ép cà chua (L)','15k',this)"><span class="ml-btn-size">L</span><span class="ml-btn-price">15k</span></div></div></div>
     <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Nước ép cam</span></div><span class="item-desc">Cam tươi vắt nguyên chất</span></div><div class="ml-prices"><div class="ml-btn" onclick="addToCart('Nước ép cam (M)','10k',this)"><span class="ml-btn-size">M</span><span class="ml-btn-price">10k</span></div><div class="ml-btn" onclick="addToCart('Nước ép cam (L)','15k',this)"><span class="ml-btn-size">L</span><span class="ml-btn-price">15k</span></div></div></div>
@@ -723,7 +757,7 @@
   <div class="section-banner banner-sinh-to"><span>🥑</span></div>
   <div class="section-header"><div class="section-title">Sinh Tố</div></div>
   <div class="item-list">
-    <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Bơ</span></div><span class="item-desc">Sánh mịn, béo ngậy đặc trưng</span></div><span class="item-price">15k</span><button class="item-add" onclick="addToCart('Sinh tố bơ','15k',this)">+</button></div>
+    <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Bơ</span></div><span class="item-desc">Sánh mịn, béo ngậy đặc trưng</span></div><span class="item-price">20k</span><button class="item-add" onclick="addToCart('Sinh tố bơ','20k',this)">+</button></div>
     <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Dâu</span></div><span class="item-desc">Chua ngọt, màu hồng bắt mắt</span></div><span class="item-price">15k</span><button class="item-add" onclick="addToCart('Sinh tố dâu','15k',this)">+</button></div>
     <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Dừa</span></div><span class="item-desc">Béo thơm vị dừa tươi mát</span></div><span class="item-price">15k</span><button class="item-add" onclick="addToCart('Sinh tố dừa','15k',this)">+</button></div>
   </div>
@@ -738,6 +772,7 @@
     <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Café sữa</span></div><span class="item-desc">Béo ngọt, dễ uống</span></div><span class="item-price">12k</span><button class="item-add" onclick="addToCart('Café sữa','12k',this)">+</button></div>
     <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Café muối</span></div><span class="item-desc">Vị lạ độc đáo, béo mặn hài hoà</span></div><span class="item-price">15k</span><button class="item-add" onclick="addToCart('Café muối','15k',this)">+</button></div>
     <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Trà tắc</span></div><span class="item-desc">Chua ngọt sảng khoái</span></div><span class="item-price">10k</span><button class="item-add" onclick="addToCart('Trà tắc','10k',this)">+</button></div>
+    <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Trà đào</span></div><span class="item-desc">Ngọt dịu, hương đào chín nồng nàn</span></div><span class="item-price">15k</span><button class="item-add" onclick="addToCart('Trà đào','15k',this)">+</button></div>
     <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Trà Atiso</span></div><span class="item-desc">Thanh nhiệt, tốt cho gan</span></div><span class="item-price">15k</span><button class="item-add" onclick="addToCart('Trà Atiso','15k',this)">+</button></div>
     <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Rau má đậu xanh</span></div><span class="item-desc">Mát lạnh, giải nhiệt cơ thể</span></div><span class="item-price">10k</span><button class="item-add" onclick="addToCart('Rau má đậu xanh','10k',this)">+</button></div>
     <div class="item"><div class="item-name-wrap"><div class="item-name-row"><span class="item-name">Siro đá bào</span></div><span class="item-desc">Ngọt mát, đá bào mịn</span></div><span class="item-price">10k</span><button class="item-add" onclick="addToCart('Siro đá bào','10k',this)">+</button></div>
@@ -748,6 +783,14 @@
 <footer class="footer">
   <div class="footer-mascot">🐱</div>
   <div class="footer-links">
+    <div class="footer-item">
+      <span class="footer-label">Địa chỉ</span>
+      <span class="footer-value">Quảng trường Ninh Phước</span>
+    </div>
+    <div class="footer-item">
+      <span class="footer-label">Giờ mở cửa</span>
+      <span class="footer-value">Cả ngày</span>
+    </div>
     <div class="footer-item">
       <span class="footer-label">Alo Ship</span>
       <span class="footer-value">0986.568.864</span>
@@ -814,17 +857,41 @@
 <div class="bill-view" id="bill-view" onclick="closeBillView()">
   <div class="bill-brand">TIỆM NHÀ BƠ</div>
   <hr class="bill-divider">
-  <div class="bill-table-row" id="bill-table-row">
-    <span class="bill-table-label" id="bill-table-label">Bàn</span>
+
+  <!-- Tại quán: chỉ số bàn -->
+  <div class="bill-table-row" id="bill-table-row" style="display:none;">
+    <span class="bill-table-label">Bàn</span>
     <input class="bill-table-input" id="bill-table" type="text" placeholder="__" maxlength="3" onclick="event.stopPropagation()">
   </div>
+
+  <!-- Ship: 3 ô riêng -->
+  <div class="bill-ship-fields" id="bill-ship-fields" style="display:none;">
+    <div class="bill-ship-field-row">
+      <span class="bill-ship-field-label">Tên</span>
+      <input class="bill-ship-field-input" id="bill-ship-name" type="text" placeholder="Nguyễn Văn A" onclick="event.stopPropagation()">
+    </div>
+    <div class="bill-ship-field-row">
+      <span class="bill-ship-field-label">SĐT</span>
+      <input class="bill-ship-field-input" id="bill-ship-phone" type="tel" placeholder="09xxxxxxxx" onclick="event.stopPropagation()">
+    </div>
+    <div class="bill-ship-field-row">
+      <span class="bill-ship-field-label">Địa chỉ</span>
+      <input class="bill-ship-field-input" id="bill-ship-address" type="text" placeholder="Số nhà, đường..." onclick="event.stopPropagation()">
+    </div>
+  </div>
+
   <hr class="bill-divider">
   <div class="bill-items" id="bill-items"></div>
-  <hr class="bill-divider">
-  <div class="bill-total-row">
-    <span class="bill-total-label">Tổng cộng</span>
-    <span class="bill-total-amount" id="bill-total-amount">0đ</span>
+
+  <!-- Tổng cộng: chỉ hiện khi Ship -->
+  <div id="bill-total-block" style="display:none; width:100%;">
+    <hr class="bill-divider">
+    <div class="bill-total-row">
+      <span class="bill-total-label">Tổng cộng</span>
+      <span class="bill-total-amount" id="bill-total-amount">0đ</span>
+    </div>
   </div>
+
   <hr class="bill-divider">
   <div class="bill-hint">chạm để đóng</div>
 </div>
@@ -1071,31 +1138,33 @@ function openBillView() {
     </div>${item.note ? `<div class="bill-item-note">↳ ${item.note}</div>` : ''}`
   ).join('');
 
-  // Total
-  const totalPrice = items.reduce((s, i) => s + i.qty * i.price, 0);
-  document.getElementById('bill-total-amount').textContent = (totalPrice/1000).toFixed(0) + 'k';
+  const tableRow = document.getElementById('bill-table-row');
+  const shipFields = document.getElementById('bill-ship-fields');
+  const totalBlock = document.getElementById('bill-total-block');
 
-  // Label + placeholder differ by order type, input itself is always free text
-  const label = document.getElementById('bill-table-label');
-  const input = document.getElementById('bill-table');
   if (currentOrderType === 'ship') {
-    label.textContent = 'Địa chỉ / SĐT';
-    input.placeholder = 'tự điền...';
-    input.style.width = '160px';
+    tableRow.style.display = 'none';
+    shipFields.style.display = 'flex';
+    totalBlock.style.display = 'block';
+    const totalPrice = items.reduce((s, i) => s + i.qty * i.price, 0);
+    document.getElementById('bill-total-amount').textContent = (totalPrice/1000).toFixed(0) + 'k';
   } else {
-    label.textContent = 'Bàn';
-    input.placeholder = '__';
-    input.style.width = '60px';
+    tableRow.style.display = 'flex';
+    shipFields.style.display = 'none';
+    totalBlock.style.display = 'none';
   }
 
   closeCart();
   document.getElementById('bill-view').classList.add('open');
-  setTimeout(() => document.getElementById('bill-table').focus(), 100);
+  // No auto-focus — khách chỉ chìa màn hình, không cần bàn phím bật sẵn
 }
 
 function closeBillView() {
   document.getElementById('bill-view').classList.remove('open');
   document.getElementById('bill-table').value = '';
+  document.getElementById('bill-ship-name').value = '';
+  document.getElementById('bill-ship-phone').value = '';
+  document.getElementById('bill-ship-address').value = '';
   currentOrderType = null;
 }
 
